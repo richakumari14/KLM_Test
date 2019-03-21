@@ -1,0 +1,52 @@
+<html xmlns:th="https://thymeleaf.org">  
+<head>
+    <title>KLM Case X01</title>
+    <style>
+        body {
+            text-align: center;
+            align-content: center;
+            background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(webapp/WEB-INF/images/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: helvetica;
+            height: 100vh;
+        }
+        
+        p {
+            font-size: 22px;
+        }
+        
+        input {
+            border: 0;
+            padding: 10px;
+            font-size: 18px;
+        }
+        
+        input[type="submit"] {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>  
+        <tr>  
+            <td><h4>Origin: </h4></td>  
+            <td><h4 th:text="${myFare.origin}"></h4></td>  
+        </tr>  
+        <tr>  
+            <td><h4>Destination: </h4></td>  
+            <td><h4 th:text="${myFare.destination}"></h4></td>  
+        </tr>  
+        <tr>  
+            <td><h4>amount: </h4></td>  
+            <td><h4 th:text="${myFare.totalamount}"></h4></td>  
+        </tr> 
+        <tr>  
+            <td><h4>currency: </h4></td>  
+            <td><h4 th:text="${myFare.currency}"></h4></td>  
+        </tr> 
+    </table>  
+    </body>
+</html>  

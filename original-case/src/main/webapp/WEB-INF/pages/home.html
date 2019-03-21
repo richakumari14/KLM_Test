@@ -1,0 +1,55 @@
+<html xmlns:th="https://thymeleaf.org" lang="en">
+<head>
+    <title>KLM Case X01</title>
+    <style>
+        body {
+            text-align: center;
+            align-content: center;
+            background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(webapp/WEB-INF/images/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: helvetica;
+            height: 100vh;
+        }
+        
+        p {
+            font-size: 22px;
+        }
+        
+        input {
+            border: 0;
+            padding: 10px;
+            font-size: 18px;
+        }
+        
+        input[type="submit"] {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+
+
+<body background="${pageContext.request.contextPath}/resources/images/bg.jpg">
+
+	<form action="home/getdetails" method="get">
+		<table>
+			<tr>
+				<td><label for="from">From : </label></td>
+				<td><input type="text" name="from" placeholder="Origin"></input></td>
+			</tr>
+			<tr>
+				<td><label for="to">To : </label></td>
+				<td><input type="text" name="to" placeholder="Destination"></input></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Search"></input></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
